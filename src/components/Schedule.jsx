@@ -108,8 +108,8 @@ const ScheduleItem = ({ item }) => {
 const ScheduleSection = ({ schedule }) => {
   return (
     <div className="container mx-auto px-4 py-8 bg-neutral-950 text-white">
-      <h2 className="text-3xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600">
-        Conference Schedule
+      <h2 className="text-3xl md:text-5xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600">
+        NSW 2024 schedule
       </h2>
       <div className="space-y-6">
         {schedule.map((item, index) => (

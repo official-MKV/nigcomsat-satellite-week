@@ -256,13 +256,13 @@ const page = () => {
         }}
       />
       <IntroSection />
-      <section>
+      <section id="speakers">
         <MeetOurSpeakers />
       </section>
       <section>
         <AppleCardsCarouselDemo />
       </section>
-      <section>
+      <section id="schedule">
         <ScheduleSection schedule={scheduleData} />
       </section>
     </div>

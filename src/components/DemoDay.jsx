@@ -49,7 +49,7 @@ export function AppleCardsCarouselDemo() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: key * 0.2 }}
     >
-      <div className="relative md:w-[300px] w-[180px] h-[200px] md:h-[350px]">
+      <div className="relative md:w-[300px] w-[180px] h-[200px] md:h-[350px] group">
         <Image
           src={item.pictureUrl}
           alt={item.name}
@@ -57,7 +57,7 @@ export function AppleCardsCarouselDemo() {
           objectFit="cover"
           className="grayscale-[100] hover:grayscale-0 transition-all duration-500 ease-in-out"
         />
-        <div className="absolute bottom-0 left-0 w-full p-4 bg-black bg-opacity-50 text-white text-xs md:text-sm opacity-0 hover:opacity-100 transition-opacity duration-500 ease-in-out">
+        <div className="absolute bottom-0 left-0 w-full p-4 bg-black bg-opacity-50 text-white text-xs md:text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
           <p>{item.description}</p>
         </div>
       </div>
@@ -73,8 +73,8 @@ export function AppleCardsCarouselDemo() {
   return (
     <div className="w-full h-full py-20 px-[20px]">
       <header className="max-w-7xl mx-auto px-4 text-center">
-        <h2 className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600">
-          Welcome to the Nigcomsat Startup Accelerator
+        <h2 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600">
+          Nigcomsat Startup Accelerator 2024
         </h2>
         <p className="mt-4 text-neutral-600 dark:text-neutral-400 text-base text-centers md:text-xl max-w-2xl mx-auto">
           Welcome to our inaugural startup accelerator program, a groundbreaking
@@ -92,11 +92,11 @@ export function AppleCardsCarouselDemo() {
         </button>
       </header>
 
-      <section className="max-w-7xl mx-auto mt-16">
-        <h3 className="text-lg md:text-3xl font-semibold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600">
+      <section className="max-w-7xl mx-auto mt-16 text-center">
+        <h3 className="text-lg md:text-3xl font-semibold bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-200 to-neutral-600">
           Meet Our Startups
         </h3>
-        <p className="text-neutral-800">
+        <p className="text-neutral-600">
           here are the startups that are to participate in the demo day
         </p>
         <Carousel items={cards} />
