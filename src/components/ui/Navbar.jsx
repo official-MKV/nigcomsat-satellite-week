@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,8 +34,8 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
-            <button
-              onClick={() => scrollToSection("home")}
+            <Link
+              href="/"
               className="flex items-center text-white font-bold text-lg"
             >
               <div className="relative size-24 md:size-36 mr-2">
@@ -46,7 +47,7 @@ const Navbar = () => {
                 />
               </div>
               <span className="md:flex hidden">NSW 2024</span>
-            </button>
+            </Link>
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-4">
@@ -57,10 +58,8 @@ const Navbar = () => {
               <NavLink onClick={() => scrollToSection("speakers")}>
                 Speakers
               </NavLink>
-              <NavLink onClick={() => scrollToSection("sponsors")}>
-                Sponsors
-              </NavLink>
-              <NavLink onClick={() => scrollToSection("contact")}>
+
+              <NavLink onClick={() => scrollToSection("footer")}>
                 Contact
               </NavLink>
               <NavLink onClick={() => scrollToSection("demo-day")}>
