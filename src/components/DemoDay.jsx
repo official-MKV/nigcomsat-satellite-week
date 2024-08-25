@@ -4,7 +4,8 @@ import Image from "next/image";
 import { Carousel, Card } from "./ui/apple-cards-carousel";
 import { motion } from "framer-motion";
 import { Link } from "lucide-react";
-
+import { IconBrandWindows } from "@tabler/icons-react";
+import { useRouter } from "next/navigation";
 const data = [
   {
     name: "AI Innovations",
@@ -40,6 +41,7 @@ const data = [
 ];
 
 export function AppleCardsCarouselDemo() {
+  const router = useRouter();
   const cards = data.map((item, key) => (
     <motion.div
       key={key}
@@ -87,7 +89,12 @@ export function AppleCardsCarouselDemo() {
             16th of October <Link />
           </span>
         </p>
-        <button className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-full shadow-md hover:bg-blue-700 transition-all">
+        <button
+          onClick={() => {
+            router.push("/demo-day");
+          }}
+          className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-full shadow-md hover:bg-blue-700 transition-all"
+        >
           Learn more about Demo Day
         </button>
       </header>
